@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker - Muhammad Abim Pangesstu</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+    <div class="header-card">
+        <div class="profile">
+            <h1>Muhammad Abim Pangesstu</h1>
+            <h2>Teknik Rekayasa Internet</h2>
+            <span>NIM 2511023</span>
+        </div>
+
+        <p>
+            Catat mood harianmu dan kenali dirimu lebih baik.
+        </p>
+    </div>
+
+    <div class="glass mood-box">
+
+        <h2>Bagaimana Perasaanmu Hari Ini?</h2>
+
+        <div class="moods">
+
+            <button onclick="setMood('Buruk Sekali 😢')">😢</button>
+            <button onclick="setMood('Buruk ☹️')">☹️</button>
+            <button onclick="setMood('Biasa 😐')">😐</button>
+            <button onclick="setMood('Baik 🙂')">🙂</button>
+            <button onclick="setMood('Sangat Baik 😁')">😁</button>
+
+        </div>
+
+        <div id="hasil">
+            Pilih mood kamu hari ini...
+        </div>
+
+    </div>
+
+    <div class="dashboard">
+
+        <div class="glass calendar">
+
+            <h2>
+                <i class="fa-solid fa-calendar-days"></i>
+                Kalender Mood
+            </h2>
+
+            <table>
+                <tr>
+                    <th>Min</th>
+                    <th>Sen</th>
+                    <th>Sel</th>
+                    <th>Rab</th>
+                    <th>Kam</th>
+                    <th>Jum</th>
+                    <th>Sab</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3 🙂</td>
+                    <td>4</td>
+                    <td>5 😐</td>
+                    <td>6</td>
+                    <td>7 😁</td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10 ☹️</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13 😁</td>
+                    <td>14</td>
+                </tr>
+
+                <tr>
+                    <td>15 🙂</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18 😐</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21 😢</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="glass stats">
+
+            <h2>
+                <i class="fa-solid fa-chart-pie"></i>
+                Ringkasan Mood
+            </h2>
+
+            <ul>
+                <li>😁 Sangat Baik : 35%</li>
+                <li>🙂 Baik : 30%</li>
+                <li>😐 Biasa : 20%</li>
+                <li>☹️ Buruk : 10%</li>
+                <li>😢 Buruk Sekali : 5%</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="glass quote">
+
+        <h2>Quote Hari Ini</h2>
+
+        <p>
+            "Disiplin hari ini, prestasi esok hari."
+        </p>
+
+    </div>
+
+    <footer>
+        © 2026 Mood Tracker | Muhammad Abim Pangesstu | Teknik Rekayasa Internet
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+if(localStorage.getItem("login") !== "true"){
+    window.location.href = "login.html";
+}
+</script>
+
+<button onclick="logout()">Logout</button>
+
+<script>
+function logout(){
+    localStorage.removeItem("login");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
